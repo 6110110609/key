@@ -23,13 +23,13 @@ mqttc.on_message = on_message                               # assign on_message 
 #mqttc.on_log = on_log
 
 #### Change following parameters #### 
-awshost = "xxxxxxxxxxxxxx-ats.iot.us-east-2.amazonaws.com"      # Endpoint
-awsport = 8883                                              # Port no.   
-clientId = "xxxxxxxx"                                     # Thing_Name
-thingName = "xxxxxxxxxx"                                    # Thing_Name
-caPath = "/home/pi/xxxxxxxx/xxxxxxxx.pem"                                      # Root_CA_Certificate_Name
-certPath = "/home/pi/xxxxxxxx/xxxxxxxx-certificate.pem.crt"                            # <Thing_Name>.cert.pem
-keyPath = "/home/pi/xxxxxxxx/xxxxxxxx-private.pem.key"                          # <Thing_Name>.private.key
+awshost = "arp0l50ghuegi-ats.iot.ap-southeast-1.amazonaws.com"      # Endpoint
+awsport = 8883                                              # Port no.
+clientId = "RaspberryPI_Ford"                                     # Thing_Name
+thingName = "RaspberryPI_Ford"                                    # Thing_Name
+caPath = "/home/pi/key/AmazonRootCA1.pem"                                      # Root_CA_Certificate_Name
+certPath = "/home/pi/key/7cd88697cf-certificate.pem.crt"                            # <Thing_Name>.cert.pem
+keyPath = "/home/pi/key/7cd88697cf-private.pem.key"                          # <Thing_Name>.private.key
  
 mqttc.tls_set(caPath, certfile=certPath, keyfile=keyPath, cert_reqs=ssl.CERT_REQUIRED, tls_version=ssl.PROTOCOL_TLSv1_2, ciphers=None)      
  
